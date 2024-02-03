@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+
+import param from "./assets/Parametre.png";
+import high from "./assets/High.png";
+import low from "./assets/Low.png";
+import mute from "./assets/Mute.png";
+import unMute from "./assets/unMute.png";
+import subtilesON from "./assets/sous-titres.png";
+import subtilesOFF from "./assets/sous-titres-off.png"
+
 import "./Settings.scss";
 
 function Settings({ sousTitre, setSousTitre }) {
@@ -35,13 +44,13 @@ function Settings({ sousTitre, setSousTitre }) {
       <img
         id="param"
         onClick={toggleActive}
-        src="src/components/Settings/assets/Parametre.png"
+        src={param}
         alt="settings"
       />
       {active && (
         <div id="para-open">
           <img
-            src="src/components/Settings/assets/High.png"
+            src={high}
             alt="volume fort"
           />
           <input
@@ -53,7 +62,7 @@ function Settings({ sousTitre, setSousTitre }) {
             onChange={volumeChange}
           />
           <img
-            src="src/components/Settings/assets/Low.png"
+            src={low}
             alt="volume faible"
           />
           <img
@@ -61,8 +70,8 @@ function Settings({ sousTitre, setSousTitre }) {
             id="mute"
             src={
               !muted
-                ? "src/components/Settings/assets/unMute.png"
-                : "src/components/Settings/assets/Mute.png"
+                ? unMute
+                : mute
             }
             alt="couper le son"
           />
@@ -71,8 +80,8 @@ function Settings({ sousTitre, setSousTitre }) {
             id="subtitles"
             src={
               sousTitre
-                ? "src/components/Settings/assets/sous-titres.png"
-                : "src/components/Settings/assets/sous-titres-off.png"
+                ? subtilesON
+                : subtilesOFF
             }
             alt="activer / desactiver les sous-titres"
           />

@@ -5,7 +5,11 @@ import "./App.scss";
 // import "./styles/SousTitres.scss";
 
 function App() {
-  return <Outlet />;
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 }
 
 export default App;

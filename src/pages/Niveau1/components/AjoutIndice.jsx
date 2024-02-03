@@ -16,7 +16,7 @@ function AjoutIndice({ indice, onAjouter }) {
 
   const openDoor = () => {
     switch (localStorage.getItem("currentStage")) {
-      case "/niveau1":
+      case "/Casino666/niveau1":
         if (JSON.parse(localStorage.getItem("inventaire"))[0].id === 1) {
           setOpen(true);
         } else {
@@ -27,7 +27,7 @@ function AjoutIndice({ indice, onAjouter }) {
         }
         break;
 
-      case "/niveau2":
+      case "/Casino666/niveau2":
         if (JSON.parse(localStorage.getItem("inventaire"))[0].id === 100) {
           setOpen(true);
         } else {
@@ -38,7 +38,7 @@ function AjoutIndice({ indice, onAjouter }) {
         }
         break;
 
-      case "/niveau3":
+      case "/Casino666/niveau3":
         if (JSON.parse(localStorage.getItem("inventaire"))[0].id === 200) {
           setOpen(true);
         } else {
@@ -49,7 +49,7 @@ function AjoutIndice({ indice, onAjouter }) {
         }
         break;
 
-      case "/niveau4":
+      case "/Casino666/niveau4":
         if (JSON.parse(localStorage.getItem("inventaire"))[0].id === 300) {
           setOpen(true);
         } else {
@@ -60,7 +60,7 @@ function AjoutIndice({ indice, onAjouter }) {
         }
         break;
 
-      case "/niveau5":
+      case "/Casino666/niveau5":
         if (JSON.parse(localStorage.getItem("inventaire"))[0].id === 400) {
           setOpen(true);
         } else {

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/Accueil.scss";
 import github from "../assets/icons8-github-50.png";
 import linkedin from "../assets/icons8-linkedin-50.png";
+import scrollBtn from "./../assets/Scroll_bas.png";
 
 function Accueil() {
   return (
@@ -16,7 +17,7 @@ function Accueil() {
         </h1>
         <a className="scroll-down" href="#buttonForScroll">
           <img
-            src="src\pages\MenuPrincipal\assets\Scroll_bas.png"
+            src={scrollBtn}
             alt="scroll-button"
           />
         </a>
@@ -215,7 +216,7 @@ function Accueil() {
           {/* LINKS END */}
         </div>
         <div id="launcher">
-          <Link to="/niveau1">
+          <Link to="/Casino666/niveau1">
             <button
               id="buttonForScroll"
               type="button"
@@ -239,7 +240,7 @@ function Accueil() {
             to={
               localStorage.getItem("currentStage")
                 ? `${localStorage.getItem("currentStage")}`
-                : "/niveau1"
+                : "/Casino666/niveau1"
             }
           >
             <button type="button">Continuer</button>

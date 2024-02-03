@@ -13,7 +13,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
   const [password, setPassword] = useState("");
 
   const codeRight = (code) => {
-    if (localStorage.getItem("currentStage") === "/niveau1") {
+    if (localStorage.getItem("currentStage") === "/Casino666/niveau1") {
       if (code.target.value.length === 15 || code.target.value.length === 18) {
         if (
           code.target.value.replaceAll(" - ", "") === secretCode
@@ -59,7 +59,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
             break;
         }
       }
-    } else if (localStorage.getItem("currentStage") === "/niveau2") {
+    } else if (localStorage.getItem("currentStage") === "/Casino666/niveau2") {
       if (code.target.value.length === 18 || code.target.value.length === 19) {
         if (code.target.value === secretCode) {
           setUnlock(true);
@@ -73,7 +73,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
       } else {
         setPassword(code.target.value);
       }
-    } else if (localStorage.getItem("currentStage") === "/niveau3") {
+    } else if (localStorage.getItem("currentStage") === "/Casino666/niveau3") {
       if (code.target.value.length === 10 || code.target.value.length === 11) {
         if (code.target.value.toUpperCase() === secretCode) {
           setUnlock(true);
@@ -87,7 +87,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
       } else {
         setPassword(code.target.value.toUpperCase());
       }
-    } else if (localStorage.getItem("currentStage") === "/niveau4") {
+    } else if (localStorage.getItem("currentStage") === "/Casino666/niveau4") {
       if (code.target.value.length === 18 || code.target.value.length === 19) {
         if (code.target.value.toUpperCase() === secretCode) {
           setUnlock(true);
@@ -101,7 +101,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
       } else {
         setPassword(code.target.value.toUpperCase());
       }
-    } else if (localStorage.getItem("currentStage") === "/niveau5") {
+    } else if (localStorage.getItem("currentStage") === "/Casino666/niveau5") {
       if (code.target.value.length === 11 || code.target.value.length === 12) {
         if (
           code.target.value.replaceAll(", ", "").toUpperCase() === secretCode
@@ -169,14 +169,14 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
 
   return (
     <div id="passer-salle">
-      {localStorage.getItem("currentStage") !== "/niveau3" ? (
+      {localStorage.getItem("currentStage") !== "/Casino666/niveau3" ? (
         <p>{dechiffrage}</p>
       ) : (
-        <img src={`https://mdonatelli1.github.io/EscapeGameAPI${dechiffrage}`} alt="A dechiffrer" />
+        <img src={dechiffrage} alt="A dechiffrer" />
       )}
       <input onChange={codeRight} type="text" value={password} />
       {unlock ? (
-        <Link to={nextStage === "/niveau6" ? "/pagefinale" : nextStage}>
+        <Link to={nextStage === "/Casino666/niveau6" ? "/Casino666/pagefinale" : nextStage}>
           Ouvrir la porte
         </Link>
       ) : (
