@@ -74,7 +74,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
         setPassword(code.target.value);
       }
     } else if (localStorage.getItem("currentStage") === "/Casino666/niveau3") {
-      if (code.target.value.length === 10 || code.target.value.length === 11) {
+      if (code.target.value.length === 16 || code.target.value.length === 17) {
         if (code.target.value.toUpperCase() === secretCode) {
           setUnlock(true);
         } else {
@@ -82,7 +82,7 @@ function PasserSalle({ secretCode, setOpen, currentStage, dechiffrage }) {
         }
       }
 
-      if (code.target.value.length > 11) {
+      if (code.target.value.length > 17 || code.target.value.includes(" ")) {
         setPassword(password);
       } else {
         setPassword(code.target.value.toUpperCase());
